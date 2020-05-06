@@ -43,16 +43,7 @@ void receiveEvent(int howMany) {
       Serial.print(dataArray[i]);
       Serial.print(" ");
     }
-    Serial.print('\n');
-//    Serial.print("Datos a guardar en la EEPROM");
-//    Serial.print('\n');
-//    for(int j = 0; j < 11; j++){
-//      Serial.print(dataArray[j]);
-//      Serial.print(" ");
-//      EEPROM.update(j, dataArray[j]);
-//      Serial.print(j);
-//      Serial.print(" ");
-//    } 
+    Serial.print('\n'); 
   }
 }
 void requestEvent(){
