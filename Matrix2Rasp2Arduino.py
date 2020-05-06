@@ -34,7 +34,6 @@ def writeMessage(addr, msg):
 def displayMessage(addr):
 	msg_joined = ""
 	ascii_msg = bus.read_i2c_block_data(addr, 0, 12) # reads the message of that address
-	print(ascii_msg)
 	msg = []
 	for i in range(len(ascii_msg)):
 		msg.append(chr(ascii_msg[i]))
