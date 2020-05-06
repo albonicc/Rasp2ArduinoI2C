@@ -29,8 +29,6 @@ def writeMessage(addr, msg):
 	 ascii_data = []
 	 for i in range(len(data)):
 		 ascii_data.append(ord(data[i]))
-	 print(ascii_data)
-	 print(type(ascii_data))
 	 bus.write_i2c_block_data(addr, 0, ascii_data)
 
 def displayMessage(addr):
@@ -40,8 +38,6 @@ def displayMessage(addr):
 	msg = []
 	for i in range(len(ascii_msg)):
 		msg.append(chr(ascii_msg[i]))
-	print(msg)
-	print(type(msg))
 	msg_joined = msg_joined.join(msg)
 	show_message(device, msg_joined, fill="white", font=proportional(LCD_FONT), scroll_delay=0.08)
 
